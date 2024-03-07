@@ -1,0 +1,1 @@
+INSERT INTO Students(FirstName, LastName, Age, Class) VALUES ("ibrahim","Anass",9,"Four")

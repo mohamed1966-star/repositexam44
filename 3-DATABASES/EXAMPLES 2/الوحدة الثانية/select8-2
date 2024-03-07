@@ -1,0 +1,1 @@
+SELECT * FROM Students WHERE LastName="Anas" AND age > 9

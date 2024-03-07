@@ -1,0 +1,7 @@
+CREATE TABLE Students (
+FirstName TEXT,
+LastName TEXT,
+Age INTEGER,
+Class TEXT
+)
+

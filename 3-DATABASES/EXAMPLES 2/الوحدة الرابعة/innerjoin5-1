@@ -1,0 +1,8 @@
+SELECT CourseName,
+Price,
+FirstName,
+LastName,
+RegDate
+FROM Courses
+INNER JOIN Students
+on Students.CourseId=Courses.CourseId

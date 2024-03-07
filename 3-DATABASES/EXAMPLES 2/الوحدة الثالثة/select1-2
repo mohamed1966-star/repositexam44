@@ -1,0 +1,1 @@
+SELECT count (Color) FROM Market

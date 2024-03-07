@@ -1,0 +1,6 @@
+select CourseName,
+(
+select count(*) FROM Students
+WHERE Students.CourseId=Courses.CourseId
+)as number
+FROM Courses

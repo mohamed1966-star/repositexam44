@@ -1,0 +1,2 @@
+INSERT INTO Students(FirstName,LastName,Gender,email,PhoneNo,CourseId)
+SELECT FirstName,LastName,Gender,email,PhoneNo,CourseId FROM OldStudents

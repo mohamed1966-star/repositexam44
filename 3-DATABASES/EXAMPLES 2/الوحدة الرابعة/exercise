@@ -1,0 +1,7 @@
+UPDATE Customers
+SET Remaining = Remaining-
+(
+SELECT Amount
+FROM installments
+WHERE Customers.CustomerID=installments.CustomerID
+)

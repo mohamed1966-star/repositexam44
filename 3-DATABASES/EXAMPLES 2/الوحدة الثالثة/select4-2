@@ -1,0 +1,3 @@
+SELECT Name, color,count (*) FROM Market
+WHERE Year="2017"
+GROUP by Name,Color

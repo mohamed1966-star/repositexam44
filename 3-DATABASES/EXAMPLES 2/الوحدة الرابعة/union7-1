@@ -1,0 +1,3 @@
+SELECT FirstName FROM Students WHERE Gender="Woman"
+UNION
+SELECT CourseName FROM Courses

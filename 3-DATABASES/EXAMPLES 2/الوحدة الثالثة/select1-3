@@ -1,0 +1,1 @@
+SELECT count (*) FROM Market WHERE Year = 2018

@@ -1,0 +1,9 @@
+SELECT Courses.CourseName,
+Courses.Price,
+Students.FirstName,
+Students.LastName,
+Students.RegDate
+FROM Courses
+JOIN Students
+on Students.CourseId=Courses.CourseId
+WHERE Courses.CourseName ="PHP"

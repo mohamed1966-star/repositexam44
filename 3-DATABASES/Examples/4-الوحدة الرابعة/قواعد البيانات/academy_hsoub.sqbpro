@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/media/work/F4E2-4D29/1-ffffformation/3-DATABASES/Examples/الوحدة الرابعة/قواعد البيانات/Bank.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1159"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainCustomers"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="Customers" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="90"/><column index="2" value="72"/><column index="3" value="82"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="installments" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="105"/><column index="2" value="62"/><column index="3" value="90"/><column index="4" value="94"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">SELECT CourseName,
+price,
+FirstName,
+LastName,
+RegDate
+FROM Courses
+INNER JOIN Students
+on Students.CourseId=Courses.CourseId</sql><sql name="SQL 2">SELECT CourseName,
+price,
+FirstName,
+LastName,
+RegDate
+FROM Courses
+INNER JOIN Students
+on Students.CourseId=Courses.CourseId
+WHERE CourseName=&quot;PHP&quot;</sql><sql name="SQL 3">SELECT CourseName,
+price,
+FirstName,
+LastName,
+RegDate
+FROM Courses
+LEFT JOIN Students
+on Students.CourseId=Courses.CourseId</sql><sql name="SQL 4">SELECT FirstName FROM Students WHERE Gender=&quot;Woman&quot;
+UNION
+SELECT CourseName FROM Courses</sql><sql name="SQL 5">SELECT * FROM Students WHERE Gender=&quot;Woman&quot;
+UNION
+SELECT * FROM Students WHERE FirstName=&quot;hiba&quot;</sql><sql name="SQL 6">SELECT CourseName,
+(SELECT count(*) FROM Students
+WHERE students.CourseId=Courses.CourseId) as Numbers
+FROM Courses</sql><sql name="SQL 8">SELECT * FROM Courses
+WHERE CourseId in (
+SELECT CourseId FROM Students)</sql><sql name="SQL 9">INSERT INTO Students (FirstName,LastName,Gender,email,RegDate,PhoneNo,CourseId)
+SELECT FirstName,LastName,Gender,email,RegDate,PhoneNo,CourseId FROM OldStudents</sql><sql name="SQL 10">CREATE TABLE &quot;Customers&quot; (
+	&quot;CustomerID&quot; INTEGER PRIMARY KEY,
+	&quot;Name&quot; TEXT,
+	&quot;Remaining&quot; INTEGER
+)</sql><sql name="SQL 11">CREATE TABLE &quot;installments&quot; (
+	&quot;TransactionID&quot; INTEGER PRIMARY KEY,
+	&quot;Amount&quot; INTEGER,
+	&quot;CustomerID&quot; INTEGER,
+	&quot;Date&quot; TEXT,
+	FOREIGN KEY (CustomerID) REFERENCES Customers (CustomerID)
+)</sql><sql name="SQL 14">UPDATE Customers
+set Remaining = Remaining-
+(SELECT Amount
+FROM installments
+WHERE Customers.CustomerID = installments.CustomerID)</sql><current_tab id="10"/></tab_sql></sqlb_project>

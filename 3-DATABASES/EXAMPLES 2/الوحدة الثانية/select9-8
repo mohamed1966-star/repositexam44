@@ -1,0 +1,1 @@
+SELECT * FROM Students WHERE firstName like "%m%" AND firstName NOT like "%d"

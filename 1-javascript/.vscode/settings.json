@@ -1,0 +1,7 @@
+{
+    "vscode-janus-debug.uploadOnSave": [
+        "index1ARITHM",
+        "index3concaten",
+        "index2ifelse"
+    ]
+}

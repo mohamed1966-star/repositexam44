@@ -1,0 +1,1 @@
+SELECT * FROM Students WHERE FirstName = "ibrahim" AND class ="four"
